@@ -1,0 +1,19 @@
+html {
+    background-color: rgb(255, 254, 246);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    max-width: 90vw;
+}
+
+p {
+    color: #5a7ebc;
+    font-family: Helvetica, Arial, sans-serif;
+}
