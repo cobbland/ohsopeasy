@@ -32,13 +32,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
 #drawn-cards img {
     border-radius: 15px;
     width: 120px;
     box-shadow: 2px 2px 2px #00000044, -1px -1px 2px #DDDDDD;
-    margin: 15px;
     cursor: pointer;
 }
 
