@@ -1,4 +1,4 @@
-const cardImg = document.getElementById('recipe-card');
+const cardImg = document.getElementById('meal-card');
 const drawnCardsDiv = document.getElementById('drawn-cards');
 
 
@@ -18,14 +18,14 @@ cardImg.addEventListener("click", target => {
         while (drawnCards.includes(cardNumber) && whileLoop) {
             cardNumber = Math.floor(Math.random() * numberOfCards + 1);
         }
-        cardImg.src = `/img/recipe-cards/recipe-card-${cardNumber}.jpg`;
+        cardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`;
         cardBack = false;
         drawnCards.push(cardNumber);
         const drawnCardImg = document.createElement('img');
-        drawnCardImg.src = `/img/recipe-cards/recipe-card-${cardNumber}.jpg`
+        drawnCardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`
         drawnCardsDiv.appendChild(drawnCardImg);
     } else {
-        cardImg.src = `/img/recipe-cards/recipe-card-back.jpg`;
+        cardImg.src = `/img/meal-cards/meal-card-back.jpg`;
         cardBack = true;
     }
 })

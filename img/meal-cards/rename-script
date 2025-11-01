@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+count=1
+
+for file in *.jpg; do
+  new_name="meal-card-$count.jpg"
+  mv "$file" "$new_name"
+  ((count++))
+done
