@@ -1,0 +1,71 @@
+html {
+    background-color: rgb(255, 254, 246);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+p {
+    color: #5a7ebc;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#recipe-card {
+    border-radius: 15px;
+    width: 300px;
+    max-width: 90vw;
+    box-shadow: 2px 2px 2px #00000044, -1px -1px 2px #DDDDDD;
+    cursor: pointer;
+}
+
+#drawn-cards {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#drawn-cards img {
+    border-radius: 15px;
+    width: 120px;
+    box-shadow: 2px 2px 2px #00000044, -1px -1px 2px #DDDDDD;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#bd-email {
+    font-family: Helvetica, Arial, sans-serif;
+    border-radius: 10px;
+    border: solid 1px #00000022;
+    padding: 0.2rem 0.5rem;
+}
+
+#bd-email:hover,
+#bd-email:focus {
+    outline: none;
+    outline: solid 2px cornflowerblue;
+}
+
+#bd-submit {
+    font-family: Helvetica, Arial, sans-serif;
+    border-radius: 10px;
+    border: solid 1px #00000022;
+    padding: 0.2rem 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#bd-submit:hover,
+#bd-submit:focus {
+    background-color: cornflowerblue;
+    color: #ffffffdd;
+    outline: none;
+}
