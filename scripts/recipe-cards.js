@@ -31,6 +31,8 @@ cardImg.addEventListener("click", target => {
 })
 
 drawnCardsDiv.addEventListener("click", target => {
-    cardImg.src = target.target.src;
-    cardBack = false;
+    if (target.target.src) {
+        cardImg.src = target.target.src;
+        cardBack = false;
+    }
 })
