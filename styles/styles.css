@@ -109,6 +109,12 @@ a:has(.icon-logo) {
     width: 120px;
     box-shadow: 2px 2px 2px #00000044, -1px -1px 2px #DDDDDD;
     cursor: pointer;
+    rotate: 0deg;
+    transition: rotate 0.2s;
+}
+
+#drawn-cards img:hover {
+    rotate: 1deg;
 }
 
 #bd-email {
