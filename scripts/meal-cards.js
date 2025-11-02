@@ -1,6 +1,6 @@
 const cardImg = document.getElementById('meal-card');
 const drawnCardsDiv = document.getElementById('drawn-cards');
-
+const instructions = document.getElementById('instructions');
 
 const numberOfCards = 30;
 let cardBack = true;
@@ -24,6 +24,21 @@ cardImg.addEventListener("click", target => {
         const drawnCardImg = document.createElement('img');
         drawnCardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`
         drawnCardsDiv.appendChild(drawnCardImg);
+        if (drawnCards.length > 0) {
+            instructions.innerText = 'Click again for another recipe.';
+        }
+        if (drawnCards.length > 4) {
+            instructions.innerText = 'Feel like cooking a lot this week, huh?';
+        }
+        if (drawnCards.length > 6) {
+            instructions.innerText = 'There are only seven days in the week, you know.';
+        }
+        if (drawnCards.length > 14) {
+            instructions.innerText = 'Maybe save some for next week?';
+        }
+        if (drawnCards.length >= numberOfCards) {
+            instructions.innerText = "That's it. That's all the recipes. Have fun!";
+        }
     } else {
         cardImg.src = `/img/meal-cards/meal-card-back.jpg`;
         cardBack = true;
