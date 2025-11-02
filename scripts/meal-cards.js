@@ -21,9 +21,11 @@ cardImg.addEventListener("click", target => {
         cardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`;
         cardBack = false;
         drawnCards.push(cardNumber);
-        const drawnCardImg = document.createElement('img');
-        drawnCardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`
-        drawnCardsDiv.appendChild(drawnCardImg);
+        if (cardNumber != 'back') {
+            const drawnCardImg = document.createElement('img');
+            drawnCardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`
+            drawnCardsDiv.appendChild(drawnCardImg);
+        }
         if (drawnCards.length > 0) {
             instructions.innerText = 'Click again for another recipe.';
         }
