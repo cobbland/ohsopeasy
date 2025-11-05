@@ -21,6 +21,7 @@ p, li {
 
 a {
     color: #5A7FBD;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 ol {
@@ -51,15 +52,28 @@ div.image-heading {
 
 .icon-logo {
     height: 30px;
+    margin-top: 0.8em;
 }
 
 #image-footer {
     margin-top: auto;
     margin-bottom: 40px;
     display: flex;
+    flex-direction: column;
+    gap: 0.2em;
     justify-content: center;
     align-items: center;
+    font-size: 0.8em;
 }
+
+#image-footer p {
+    margin: 0;
+}
+
+/* #image-footer a {
+    text-decoration: none;
+    font-weight: bold;
+} */
 
 .heading-image {
     width: 400px;
