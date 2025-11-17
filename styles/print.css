@@ -5,6 +5,9 @@
     #instructions, #meal-card {
         display: none;
     }
+    #drawn-cards .card {
+        box-shadow: none;
+    }
     .print-only {
         display: block;
         margin-top: 40px;
