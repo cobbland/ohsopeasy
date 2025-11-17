@@ -37,8 +37,10 @@ cardImg.addEventListener("click", target => {
             drawnCardsDiv.appendChild(cardAndDay);
         }
         if (drawnCards.length > 0) {
-            instructions.innerText = `Click again for another recipe. 
-            (And click the day to cycle through the week.)`;
+            instructions.innerText = 'Click again for another recipe.';
+        }
+        if (drawnCards.length > 1) {
+            instructions.innerText = 'Click the day to cycle through the week.'
         }
         if (drawnCards.length > 4) {
             instructions.innerText = 'Feel like cooking a lot this week, huh?';
