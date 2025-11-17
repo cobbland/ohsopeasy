@@ -1,0 +1,13 @@
+@media print {
+    html {
+        background-color: none;
+    }
+    #instructions, #meal-card {
+        display: none;
+    }
+    .print-only {
+        display: block;
+        margin-top: 40px;
+        width: 35%;
+    }
+}
