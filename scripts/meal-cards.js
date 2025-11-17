@@ -9,6 +9,8 @@ let drawnCards = [];
 cardImg.addEventListener("click", target => {
     if (cardBack) {
         let cardNumber = Math.floor(Math.random() * numberOfCards + 1);
+        let dayNumber = Math.floor(Math.random() * 7);
+        const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
         let whileLoop = true;
         if (drawnCards.length >= numberOfCards) {
             whileLoop = false;
@@ -23,11 +25,20 @@ cardImg.addEventListener("click", target => {
         drawnCards.push(cardNumber);
         if (cardNumber != 'back') {
             const drawnCardImg = document.createElement('img');
-            drawnCardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`
-            drawnCardsDiv.appendChild(drawnCardImg);
+            const drawnCardDay = document.createElement('img');
+            const cardAndDay = document.createElement('div');
+            drawnCardImg.src = `/img/meal-cards/meal-card-${cardNumber}.jpg`;
+            drawnCardDay.src = `/img/days/${days[dayNumber]}.png`;
+            drawnCardImg.classList.add("card");
+            drawnCardDay.classList.add("day");
+            cardAndDay.classList.add("card-and-day");
+            cardAndDay.appendChild(drawnCardImg);
+            cardAndDay.appendChild(drawnCardDay);
+            drawnCardsDiv.appendChild(cardAndDay);
         }
         if (drawnCards.length > 0) {
-            instructions.innerText = 'Click again for another recipe.';
+            instructions.innerText = `Click again for another recipe. 
+            (And click the day to cycle through the week.)`;
         }
         if (drawnCards.length > 4) {
             instructions.innerText = 'Feel like cooking a lot this week, huh?';
@@ -48,8 +59,17 @@ cardImg.addEventListener("click", target => {
 })
 
 drawnCardsDiv.addEventListener("click", target => {
-    if (target.target.src) {
+    if (target.target.classList.contains("card")) {
         cardImg.src = target.target.src;
         cardBack = false;
+    }
+    if (target.target.classList.contains("day")) {
+        const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+        const day = target.target.src.split('/').pop().replace('.png', '');
+        let nextDay = days[days.indexOf(day) + 1];
+        if (!nextDay) {
+            nextDay = 'mon';
+        }
+        target.target.src = `/img/days/${nextDay}.png`;
     }
 })

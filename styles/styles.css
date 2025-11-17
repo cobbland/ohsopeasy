@@ -119,10 +119,15 @@ div.image-heading {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-#drawn-cards img {
+#drawn-cards .card-and-day {
+    position: relative;
+    margin: 0;
+}
+
+#drawn-cards .card {
     border-radius: 15px;
     width: 120px;
     box-shadow: 2px 2px 2px #00000044, -1px -1px 2px #DDDDDD;
@@ -131,8 +136,15 @@ div.image-heading {
     transition: rotate 0.2s;
 }
 
-#drawn-cards img:hover {
+#drawn-cards .card:hover {
     rotate: 1deg;
+}
+
+#drawn-cards .day {
+    width: 50px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
 }
 
 #bd-email {
